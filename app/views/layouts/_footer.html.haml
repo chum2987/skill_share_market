@@ -139,6 +139,13 @@
         %li.list
           = link_to "#", class: "list__link" do
             ココナラ活用マガジン
-    %form{:action => "/main", :method => "post"}
-      %input{:name => "content", :type => "text"}/
-      %input{:type => "submit", :value => "お問い合わせ"}/
+    .feedback
+      .inquiry-box
+        .inquiry-box__title
+          ココナラへのご意見・ご要望を
+          %br
+          お聞かせください
+        .inquiry-box__form
+          = form_tag('/', method: :post, class: "box") do
+            %textarea.box__text{:cols => "30", :name => "text", :placeholder => "サービスへのご意見、ご要望をお聞かせください。ご意見・ご要望に返信できないことをあらかじめご了承ください。", :rows => "2"}
+            %input.box__button{:type => "submit", :value => "送信する"}/
