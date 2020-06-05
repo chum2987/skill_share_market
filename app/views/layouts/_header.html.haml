@@ -1,6 +1,15 @@
 .header
-  .header_main
-    .header_main_inner
+  .header__main
+    .header__main__inner
+      =link_to "#" do
+        スキル
+      .header__main__inner__search
+        = form_for "#" do |f|
+          = f.text_field :content, class: 'form_search', placeholder: 'type a search'
+          .header_main_inner_box
+            .header_main_inner_box_search
+        
+      .header_main_inner_
   
   .neader_sub
     .header_sub_inner

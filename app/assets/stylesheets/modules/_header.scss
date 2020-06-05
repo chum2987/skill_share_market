@@ -2,8 +2,31 @@
   width: 100%;
   height: 100px;
   border-bottom: 1px solid #ccc;
-  background: blue;
-  .header_main{
-    
+  background: powderblue;
+  .header__main{
+    &__inner{
+      position: relative;
+      display: flex;
+      margin: 0 auto;
+      padding: 0 20px;
+      min-width: 980px;
+      max-width: 1240px;
+      height: 60px;
+      align-items: center;
+      background-color: pink;
+      // justify-content: space-evenly;
+      &__search{
+        margin-left: auto;
+        width: 100%;
+      }
+    }
+
+      .header_main_inner_box{
+
+    }
+
+  }
+  .header__sub{
+
   }
 }
