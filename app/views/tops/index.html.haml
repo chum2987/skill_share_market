@@ -1,1 +1,79 @@
-hello skill
+.main
+  .main__top-image
+    .main__top-image__content
+      %h2.main__top-image__content__title 
+        %br 人生を変えるスキルシェアアプリ
+      %p.main__top-image__content__text
+        スキルシェアはだれでもかんたんにギブアンドテイクできる
+        %br スキルシェアアプリです
+        .main__top-image__content__btn
+  .main__upper-info
+    %h2.main__upper-info__title スキルシェアが選ばれる3つの理由
+    %ul.main__upper-info__lists
+      %li.main__upper-info__lists__list
+        .main__upper-info__lists__list__img
+          %span.main__upper-info__lists__list__img__num 1
+          =image_tag "3070846_m.jpg",size:"350x250"
+          
+        %h2.main__upper-info__lists__list__text
+          %span 3分ですぐに登録
+        %p.main__upper-info__lists__list__text2 スマホで入力するだけで簡単に登録できる！
+      %li.main__upper-info__lists__list
+        .main__upper-info__lists__list__img
+          %span.main__upper-info__lists__list__img__num 2
+          =image_tag "3070846_m.jpg",size:"350x250"
+          
+        %h2.main__upper-info__lists__list__text
+          %span シンプルで使いやすい
+        %p.main__upper-info__lists__list__text2 めんどくさい入力は必要なく、検索も登録もスムーズ！
+      %li.main__upper-info__lists__list
+        .main__upper-info__lists__list__img
+          %span.main__upper-info__lists__list__img__num 3
+          =image_tag "3070846_m.jpg",size:"350x250"         
+        %h2.main__upper-info__lists__list__text
+          手数料
+          %span 業界最安
+        %p.main__upper-info__lists__list__text2 最大3%でお得に出品&購入！
+  .main__middle-image
+    .main__middle-image__content
+      %h2.main__middle-image__content__title 会員数日本一位
+      %p.main__middle-image__content__text
+        スキルシェアは、スキル提供アプリで最も人気。
+        %br
+          スキル登録数・登録人数も業界最多です！
+          %br
+            今すぐ欲しいスキルに出会えるかもしれません。
+      .main__middle-image__content__btn
+        = link_to "#"
+  .main__lower-info
+    %h2.main__lower-info__title スキルシェアの特徴
+    %ul.main__lower-info__lists
+      %li.main__lower-info__lists__list
+       
+        %h3.main__lower-info__lists__list__title 簡単にギブアンドテイクできる
+        %p.main__lower-info__lists__list__text スマホひとつで、いつでもどこでも簡単にスキル提供が可能！
+      %li.main__lower-info__lists__list
+       
+        %h3.main__lower-info__lists__list__title 売上金は即日振込みに対応
+        %p.main__lower-info__lists__list__text 午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします!
+      %li.main__lower-info__lists__list
+       
+        %h3.main__lower-info__lists__list__title 様々な支払いに対応
+        %p.main__lower-info__lists__list__text お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+  .main__pickup
+    %h2.main__pickup__category ピックアップスキル
+    .main__pickup__content
+      = link_to "#" ,class:"main__pickup__content__link" do
+        %h3.main__pickup__content__link__title 新規登録スキル
+    .main__pickup__content__lists   
+      .main__pickup__content__lists__list
+        = link_to "#", class:"main__pickup__content__lists__list__link" do
+          .main__pickup__content__lists__list__link__img
+           
+          .main__pickup__content__lists__list__link__box
+            %h3.main__pickup__content__lists__list__link__box__name 
+            .main__pickup__content__lists__list__link__box__price
+              %ul
+                %li  
+                  円 (税込)
+
