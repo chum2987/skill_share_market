@@ -6,6 +6,7 @@ class CreateSkills < ActiveRecord::Migration[5.2]
       t.string  :description
       # t.integer :suplier_id
       # t.integer :consumer_id
+      # t.integer :a_category_id
       t.timestamps
     end
   end
