@@ -9,7 +9,13 @@
 
 @import "reset";
 @import "modules/header";
-
 @import "modules/tops";
 @import "modules/footer";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.waper {
+  display: flex;
+  height: 100vh;
+}
 
