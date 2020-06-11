@@ -5,16 +5,14 @@
   background: powderblue;
   .header__main{
     &__inner{
+      justify-content: space-around;
       position: relative;
       display: flex;
       margin: 0 auto;
       padding: 0 20px;
-      min-width: 980px;
-      max-width: 1240px;
       height: 60px;
       align-items: center;
       background-color: pink;
-      // justify-content: space-evenly;
       &__search{
         margin-left: 24px;
         min-width: 360px;
@@ -32,7 +30,46 @@
         max-width: 140px;
         width: 140px;
         height: 33px;
+        }
       }
+      .header-main-logo{
+        min-width: 140px;
+        max-width: 140px;
+        width: 140px;
+        height: 33px;
+
+      }
+
+      // ここからログインとかのいろいろ
+      &__nav__right{
+        display: flex;
+        padding: 0 16px 0 16px;
+        ul.user_box{
+          display: flex;
+          justify-content: space-between;
+          background-color: rgb(255, 255, 255);
+          bottom: 0px;
+          left: 200px;
+          top: 0px;
+          line-height: 30px;
+          cursor: pointer;
+          text-align: left;
+          a{
+            text-decoration: none;
+            color:#000;
+          }
+          
+          li{
+            padding: 0 0 0 16px;
+            &:hover {
+              background-color: skyblue;
+              a {
+                color: #fff;
+              }
+            }
+          }
+        }
+      } 
     }
       .header_main_inner_box{
 

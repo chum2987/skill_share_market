@@ -17,15 +17,7 @@ default: &default
   password:
   socket: /tmp/mysql.sock
 
-development:
-  adapter: mysql2
-  encoding: utf8
-  database: blog_development
-  pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
-
+  
 development:
   <<: *default
   database:  skill_share_market_development
