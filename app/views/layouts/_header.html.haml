@@ -5,10 +5,20 @@
         = image_tag "skill_share_logo.png", class: "header-main-logo"
       .header__main__inner__search
         = form_for "#" do |f|
-          = f.text_field :content, class: 'form_search', placeholder: 'キーワードから探す'
-          %label.head__in__up__search__btn
+          = f.text_field :keyword, class: "header__main__inner__search__txt", placeholder:"キーワードから探す"
+          %label.header__main__inner__search__btn
             = icon('fas', 'search', class: '')
-            = f.submit "", class: "head__in__up__search__btn--display"
+            = f.submit "", class: "header__main__inner__search__btn--display"
+      
+      
+      
+      
+      -# .header__main__inner__search
+      -#   = form_for "#" do |f|
+      -#     = f.text_field :content, class: 'form_search', placeholder: 'キーワードから探す'
+      -#     %label.head__in__up__search__btn
+      -#       = icon('fas', 'search', class: '')
+      -#       = f.submit "", class: "head__in__up__search__btn--display"
         -# サーチのボックス１
         .header__main__inner__search__btn
           -# サーチのボックス２
@@ -17,7 +27,7 @@
             .header_main_inner_box_search
         
       .header__main__inner__nav__right
-        %ul.user_box
+        %ul.box
           %li.user_box__nav__right__new
             =link_to "スキル提供", "#" 
           %li.user_box__nav__right__mypage
