@@ -5,7 +5,7 @@
   background: powderblue;
   .header__main{
     &__inner{
-      // justify-content: space-around;
+      justify-content: space-around;
       position: relative;
       display: flex;
       margin: 0 auto;
@@ -19,6 +19,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        .input-box {
+          display: flex;
+        }
         &__txt{
           border: 1px solid #666;
           width: calc(100% - 36px);
