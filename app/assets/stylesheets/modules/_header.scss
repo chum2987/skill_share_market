@@ -5,7 +5,7 @@
   background: powderblue;
   .header__main{
     &__inner{
-      // justify-content: space-around;
+      justify-content: space-around;
       position: relative;
       display: flex;
       margin: 0 auto;
@@ -19,6 +19,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        .input-box {
+          display: flex;
+        }
         &__txt{
           border: 1px solid #666;
           width: calc(100% - 36px);
@@ -40,29 +43,6 @@
         }
       }
 
-
-      // &__search{
-      //   margin-left: auto;
-      //   width: 100%;
-
-        // margin-left: 24px;
-        // min-width: 360px;
-        // max-width: 360px;
-        // width: 360px;
-      //   .form_search{
-      //     width: 100%;
-      //     display: flex;
-      //     margin-bottom: 5px;
-        
-      //     .head__in__up__search__btn--display{
-      //       width: 36px;
-      //       border: 0;
-      //       cursor: pointer;
-      //       background-color: #3CCACE;
-      //       padding: 8px;
-      //     }
-      //   }
-      // }
       .header-main-logo{
         min-width: 140px;
         max-width: 140px;
@@ -71,10 +51,6 @@
         }
       }
 
-
-    
-      
-      
       &__inner__nav__right{
         padding: 0 16px 0 16px;
           ul.box{
