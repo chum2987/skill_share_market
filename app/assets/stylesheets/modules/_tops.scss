@@ -63,8 +63,8 @@
       width: 100%;
       margin: 0 auto;
       &__list{
-        width: 30%;
-        margin: 16px 5% 0 0;
+        width : calc(100% / 3);
+        // margin: 16px 5% 0 0;
         text-align: left;
         display: flex;
         flex-direction: column;
@@ -201,7 +201,7 @@
         }
       }
       &__lists{
-        width: 1200px;
+        // width: 1200px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
