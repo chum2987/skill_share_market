@@ -1,0 +1,37 @@
+.signup--wrapper
+  =render "/layouts/header"
+  .signup--main
+    .signup__contents
+      .signup__contents__box
+        .signup__contents__box__title 
+          .signup__contents__box__title--text 会員登録
+        .signup__contents__box__sns
+          %ul.signup__contents__box__sns__tab
+            %li.signup__contents__box__sns__tab__one
+              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
+                -# = icon('fa', 'yahoo', class: '')
+                .signup__contents__box__sns__tab__one--text Yahoo! JAPANIDで登録する
+            %li.signup__contents__box__sns__tab__one
+              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
+                -# = icon('fa','facebook-official', class: '')
+                .signup__contents__box__sns__tab__one--text Facebookで登録する
+            %li.signup__contents__box__sns__tab__one
+              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
+                -# = icon('fa', 'google', class: '')
+                .signup__contents__box__sns__tab__one--text Googleで登録する
+            %li.signup__contents__box__sns__tab__one
+              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
+                -# = icon('fa', '', class: '') 
+                .signup__contents__box__sns__tab__one--text LINEで登録する
+        %p.signup__contents__box__bar - または -
+        .signup__contents__box__mail
+          =form_for '#' do |f|
+            = f.email_field :email, class:"signup__contents__box__mail__form", placeholder:"メールアドレス"
+            .signup__contents__box__mail__block
+              = f.submit "メールアドレスで登録する", class:'signup__contents__box__mail__block__btn'
+        %p.signup__contents__box__bar - または -
+        .signup__contents__box__login__block
+          = link_to '#', class:'' do
+            .signup__contents__box__login__block__text ログインはこちら
+          -# = link_to "#" do
+  =render "/layouts/footer"

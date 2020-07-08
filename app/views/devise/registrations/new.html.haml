@@ -1,37 +1,39 @@
-.signup--wrapper
+.resist--wrapper
   =render "/layouts/header"
-  .signup--main
-    .signup__contents
-      .signup__contents__box
-        .signup__contents__box__title 
-          .signup__contents__box__title--text 会員登録
-        .signup__contents__box__sns
-          %ul.signup__contents__box__sns__tab
-            %li.signup__contents__box__sns__tab__one
-              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
-                -# = icon('fa', 'yahoo', class: '')
-                .signup__contents__box__sns__tab__one--text Yahoo! JAPANIDで登録する
-            %li.signup__contents__box__sns__tab__one
-              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
-                -# = icon('fa','facebook-official', class: '')
-                .signup__contents__box__sns__tab__one--text Facebookで登録する
-            %li.signup__contents__box__sns__tab__one
-              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
-                -# = icon('fa', 'google', class: '')
-                .signup__contents__box__sns__tab__one--text Googleで登録する
-            %li.signup__contents__box__sns__tab__one
-              = link_to '#', class:'signup__contents__box__sns__tab__one__link' do
-                -# = icon('fa', '', class: '') 
-                .signup__contents__box__sns__tab__one--text LINEで登録する
-        %p.signup__contents__box__bar または
-        .signup__contents__box__mail
-          =form_for '#' do |f|
-            = f.email_field :email, class:"signup__contents__box__mail__form", placeholder:"メールアドレス"
-            .signup__contents__box__mail__block
-              = f.submit "メールアドレスで登録する", class:'signup__contents__box__mail__block__btn'
-        .signup__contents__box__bar -
-        .signup__contents__box__login__block
-          = link_to '#', class:'' do
-            .signup__contents__box__login__block__text ログインはこちら
-          -# = link_to "#" do
+  .resist--main
+    .resist--main__box
+      .resist--main__box__block
+        .resist--main__box__block__pagination
+          %li.resist--main__box__block__pagination__color 1
+          %span.resist--main__box__block__pagination__bar ー
+          %li.resist--main__box__block__pagination__number 2
+          %span.resist--main__box__block__pagination__bar ー
+          %li.resist--main__box__block__pagination__number 3
+        .resist--main__box__block__title
+          %head.resist--main__box__block__title__text 新規登録
+        .resist--main__box__block__forms
+          = form_for "#" do |f| 
+            .resist--main__box__block__forms__one
+              .resist--main__box__block__forms__list__text ユーザー名 
+              = f.email_field :email, class:"resist--main__box__block__forms__list__form", placeholder:"ユーザー名"
+            .resist--main__box__block__forms__one
+              .resist--main__box__block__forms__list__text メールアドレス
+              = f.text_field :username, class:"resist--main__box__block__forms__list__form", placeholder:"メールアドレス"
+            .resist--main__box__block__forms__one
+              .resist--main__box__block__forms__list__text パスワード
+              = f.text_field :password, class:"resist--main__box__block__forms__list__form", placeholder:"パスワード"
+            .resist--main__box__block__forms__one
+              .resist--main__box__block__forms__list__text パスワード確認用
+              = f.text_field :password, class:"resist--main__box__block__forms__list__form", placeholder:"パスワード確認用"
+            .resist--main__box__block__forms__one
+              .resist--main__box__block__forms__list__text 生年月日
+              != sprintf(f.date_select(:birthday, prefix:'birthday',with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),' 年 ',' 月 ')+'日'
+            .resist--main__box__block__forms__one
+              .resist--main__box__block__forms__list__text プロフィール画像
+              %input.resist--main__box__block__forms__one__pic(type="file")
+            .resist--main__box__block__forms__guideline
+              %a.resist--main__box__block__forms__guideline__text(href="#") 利用規約
+            .resist--main__box__block__forms__btn
+              = link_to '', class:'resist--main__box__block__forms__btn--link' do
+                .resist--main__box__block__forms__btn__text 利用規約に同意して登録
   =render "/layouts/footer"
