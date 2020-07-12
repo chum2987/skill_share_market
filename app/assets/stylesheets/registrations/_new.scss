@@ -10,7 +10,7 @@
       border: 1px solid #ddd;
       .resist--main__box__block{
         padding: 0 auto;
-        padding: 30px 197px 60px;
+        padding: 30px 190px 60px;
         .resist--main__box__block__pagination{
           padding-bottom: 20px;
           display: flex;
@@ -88,5 +88,59 @@
         }
       }
     }
+  }
+}
+.resist--main__box__block__contents{
+  .resist--main__box__block__contents__message{
+    margin-top: 20px;
+    .resist--main__box__block__contents__message__text{
+      color: pink;
+      font-weight: bold;
+      font-size: 23px;
+    } 
+  }
+  .resist--main__box__block__contents__detail{
+    margin-top: 20px;
+    .resist--main__box__block__contents__detail__text{
+    } 
+  }
+  .resist--main__box__block__contents__mail{
+    margin-top: 20px;
+    background-color: powderblue;
+    height: 30px;
+    border-radius: 4px;
+    .resist--main__box__block__contents__mail__icon{
+      color: white;
+      float: left;
+      line-height: 30px;
+      margin-left: 5px;
+    }
+    .resist--main__box__block__contents__mail__address{
+      font-weight: bold;
+      text-align: center;
+      line-height: 30px;
+    } 
+  }
+  .resist--main__box__block__contents__attention{
+    margin-top: 10px;
+    text-align: center;;
+    .resist--main__box__block__contents__attention__text{
+
+    }
+    .resist--main__box__block__contents__attention__link{
+    }
+  }
+}
+
+.resist--main__box__block__contents__words{
+  .resist--main__box__block__contents__words__text{
+    margin-top: 10px;
+  }
+}
+.resist--main__box__block__contents__link{
+  margin-top: 30px;
+  text-align: center;
+  .resist--main__box__block__contents__link__text{
+
   }
 }
