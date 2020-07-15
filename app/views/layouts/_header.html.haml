@@ -1,7 +1,7 @@
 .header
   .header__main
     .header__main__inner
-      =link_to "#" do
+      =link_to root_path do
         = image_tag "skill_share_logo.png", class: "header-main-logo"
       .header__main__inner__search
         .header__main__inner__search__form
@@ -26,7 +26,7 @@
 
           -else
             %li.user_box__nav__right__new
-              =link_to "新規登録", new_user_registration_path
+              =link_to "新規登録", users_registrations_index_path
             %li.head__in__nav__right__login
               =link_to "ログイン", new_user_session_path
 
