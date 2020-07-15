@@ -27,8 +27,9 @@
         .signup__contents__box__mail
           =form_for '#' do |f|
             = f.email_field :email, class:"signup__contents__box__mail__form", placeholder:"メールアドレス"
-            .signup__contents__box__mail__block
-              = f.submit "メールアドレスで登録する", class:'signup__contents__box__mail__block__btn'
+            = link_to users_registrations_new_path, class:'' do
+              .signup__contents__box__mail__block
+                = f.submit "メールアドレスで登録する", class:'signup__contents__box__mail__block__btn'
         %p.signup__contents__box__bar - または -
         .signup__contents__box__login__block
           = link_to user_session_path, class:'' do
