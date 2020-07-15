@@ -1,0 +1,25 @@
+.resist--wrapper
+  =render "/layouts/header"
+  .resist--main
+    .resist--main__box
+      .resist--main__box__block
+        .resist--main__box__block__pagination
+          %li.resist--main__box__block__pagination__number 1
+          %span.resist--main__box__block__pagination__bar ー
+          %li.resist--main__box__block__pagination__color 2
+          %span.resist--main__box__block__pagination__bar ー
+          %li.resist--main__box__block__pagination__number 3
+        .resist--main__box__block__title
+          %head.resist--main__box__block__title__text 新規登録
+        .resist--main__box__block__contents
+          .resist--main__box__block__contents__message
+            .resist--main__box__block__contents__message__text 仮登録ありがとうございます
+          .resist--main__box__block__contents__detail
+            .resist--main__box__block__contents__detail__text 下記メールアドレスに、認証用URLをお送りしました。メールに記載されている認証用URLをクリックして本登録を行ってください。
+          .resist--main__box__block__contents__mail
+            = icon('fa', 'envelope', class: 'resist--main__box__block__contents__mail__icon')
+            .resist--main__box__block__contents__mail__address skill_share_market@gmail.com
+          .resist--main__box__block__contents__attention
+            %span.resist--main__box__block__contents__attention__text メールが届かない場合は
+            %a.resist--main__box__block__contents__attention__link(href="#") コチラ
+  =render "/layouts/footer"

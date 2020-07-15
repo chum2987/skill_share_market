@@ -1,15 +1,35 @@
 .header
   .header__main
     .header__main__inner
-      =link_to "#" do
-        スキル
+      =link_to root_path do
+        = image_tag "skill_share_logo.png", class: "header-main-logo"
       .header__main__inner__search
-        = form_for "#" do |f|
-          = f.text_field :content, class: 'form_search', placeholder: 'type a search'
-          .header_main_inner_box
-            .header_main_inner_box_search
+        .header__main__inner__search__form
+          = form_for "#" do |f| 
+            .input-box
+              = f.text_field :keyword, class: "header__main__inner__search__txt", placeholder:"キーワードから探す"
+              %label.header__main__inner__search__btn
+                = icon('fas', 'search', class: '')
+                = f.submit "", class: "header__main__inner__search__btn--display"
+
+
         
-      .header_main_inner_
+      .header__main__inner__nav__right
+        %ul.box
+          -if user_signed_in?
+            %li.user_box__nav__right__new
+              =link_to "スキル提供", "#" 
+            %li.user_box__nav__right__mypage
+              =link_to "マイページ", "#"
+            %li.user_box__nav__right__logout
+              =link_to "ログアウト", "#"
+
+          -else
+            %li.user_box__nav__right__new
+              =link_to "新規登録", users_registrations_index_path
+            %li.head__in__nav__right__login
+              =link_to "ログイン", new_user_session_path
+
   
   .neader_sub
     .header_sub_inner
