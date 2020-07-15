@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: "tops#index"
   resources :tops, only: [:index]
+  
   devise_for :users, controllers: {
     registrations: 'users/registrations',
     sessions: 'users/sessions'
@@ -11,4 +12,7 @@ Rails.application.routes.draw do
     get 'users/registrations/mail_check', to: 'users/registrations#mail_check'
     get 'users/registrations/completed',  to: 'users/registrations#completed'
   end
+  
+  resources :skills, only: [:show]
+ 
 end

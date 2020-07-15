@@ -1,0 +1,86 @@
+.detapage {
+  padding: 0;
+  max-width: 100%;
+  font-size: 14px;
+  background-color: yellowgreen;
+  height: 500px;
+  .detapage__colums {
+    .detapage__colums__main {
+      display: contents;
+      .detapage__colums__main__header {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0 12px;
+        -webkit-box-ordinal-group: 21;
+        -ms-flex-order: 20;
+        order: 20;
+        .serviceDetailTitle {
+          box-sizing: border-box;
+          .c-heading {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            .c-heading_row {
+              .c-heading_overview_c-overview {
+                box-sizing: border-box;
+                h1.heading-name {
+                  p.heading-name_subtitle {
+                    font-size: 17px;
+                    line-height: 24px;
+                  }
+                  p.heading-name_subtitle__text {
+                    font-size: 12px;
+                  }
+                }
+                .c-heading_labels {
+                  margin-bottom: 12px;
+                }
+              .c-performance {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                .c-performance_row {
+                  display: flex;
+                  .c-performance_item_c-performance_rating {
+                    display: inline-block;
+                    margin-right: 20px;
+                    line-height: 1;
+                    .c-performance_label {
+                      margin-right: 4px;
+                      padding: 4px 8px 5px;
+                      font-size: 12px;
+                      display: inline-block;
+                      background: #f3f3f3;
+                    }
+                    .c-performance_content {
+                      display: inline-block;
+                      top: 1px;
+                      position: relative;
+                      // span {
+                      //   font-size: 12px;
+                      //   color: yellow;
+                      // }
+                      //   .fa-staricon {
+                      //     color: yellow;
+                      //   }
+                      
+                    }
+
+                  }
+                }
+              }
+            
+                .detapage__colums__main__header__c-serviceDetailTitle {
+                  -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
