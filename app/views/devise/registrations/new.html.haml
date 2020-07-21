@@ -14,7 +14,7 @@
           = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text ニックネーム
-              = f.email_field :nickname, class:"resist--main__box__block__forms__list__form", placeholder:"ニックネーム"
+              = f.text_field :nickname, class:"resist--main__box__block__forms__list__form", placeholder:"ニックネーム"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text メールアドレス
               = f.email_field :email, autofocus: true, autocomplete: "email", class:"resist--main__box__block__forms__list__form", placeholder:"メールアドレス"
@@ -30,7 +30,15 @@
               = f.password_field :password_confirmation, autocomplete: "new-password", class:"resist--main__box__block__forms__list__form", placeholder:"パスワード確認用"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text 生年月日
-              != sprintf(f.date_select(:birthday, prefix:'birthday',with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),' 年 ',' 月 ')+'日'
+              = f.date_select :birthday, use_month_numbers: true,start_year: 1930, end_year: (Time.now.year - 10), default: Date.new(1989, 1, 1)
+            .resist--main__box__block__forms__one
+              .resist--main__box__block__forms__list__text 性別
+              = f.radio_button :gender, :male
+              = f.label :gender, "男性"
+              = f.radio_button :gender, :female 
+              = f.label :gender, "女性"
+              = f.radio_button :gender, :other
+              = f.label :gender, "その他"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text プロフィール画像
               = f.file_field :image
