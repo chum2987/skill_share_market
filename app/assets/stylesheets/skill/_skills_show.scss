@@ -68,6 +68,7 @@
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
               }
+
             }
           }
         }
@@ -75,7 +76,65 @@
     }
   }
 }
+//評価の場所//
+.c-performance {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  .c-performance_row {
+    display: flex;
+    .c-performance_item_c-performance_rating {
+      display: inline-block;
+      margin-right: 20px;
+      line-height: 1;
+      .c-performance_label {
+        margin-right: 4px;
+        padding: 4px 8px 5px;
+        font-size: 12px;
+        display: inline-block;
+        background: #f3f3f3;
+      }
+      .c-performance_content {
+        display: inline-block;
+        top: 1px;
+        position: relative;
+        .staricon {
+          color: yellow;
+        }
+      }
+    }
+    //販売実績//
+    .c-perfomance_item_c-performance_seles{
+      display: inline-block;
+      margin-right: 20px;
+      line-height: 1;
+      .c-performance_label {
+        margin-right: 4px;
+        padding: 4px 8px 5px;
+        font-size: 12px;
+        display: inline-block;
+        background: #f3f3f3;
+      }
+      .c-perfomance_content {
+        display: inline-block;
+        top: 1px;
+        position: relative;
+      }
+    }
+  }
+  //残り//
+  .c-perfromance_row {
+    margin-top: 4px;
+    .c-perfomance_item_c-performance_stock{
+      
+    }
+  }
+  
+}
+
 }
 .staricon {
   color: yellow;
 }
+

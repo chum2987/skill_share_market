@@ -1,3 +1,4 @@
+=render "/layouts/header"
 .detapage
   .detapage__colums
     .detapage__colums__main
@@ -16,11 +17,20 @@
                 .c-performance_row
                   .c-performance_item_c-performance_rating
                     .c-performance_label
-                    評価
+                      評価
                     .c-performance_content
                       %span.c-rating
                         = icon('fas', 'star', class: 'staricon')
-
+                        4.0
+                  .c-perfomance_item_c-performance_seles
+                    .c-performance_label
+                      販売実績
+                    .c-perfomance_content
+                      34 件
+                .c-perfromance_row
+                  .c-perfomance_item_c-performance_stock
+                    .c-performance_label
+                      残り
 
 
             .detapage__colums__main__header__c-serviceDetailTitle
