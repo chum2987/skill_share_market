@@ -22,7 +22,7 @@
             %li.user_box__nav__right__mypage
               =link_to "マイページ", "#"
             %li.user_box__nav__right__logout
-              =link_to "ログアウト", "#"
+              =link_to "ログアウト", destroy_user_session_path, :method => :delete
 
           -else
             %li.user_box__nav__right__new
