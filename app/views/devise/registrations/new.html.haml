@@ -11,27 +11,57 @@
         .resist--main__box__block__title
           %head.resist--main__box__block__title__text 新規登録
         .resist--main__box__block__forms
-          = form_for "#" do |f| 
+          = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
             .resist--main__box__block__forms__one
-              .resist--main__box__block__forms__list__text ユーザー名 
-              = f.email_field :email, class:"resist--main__box__block__forms__list__form", placeholder:"ユーザー名"
+              .resist--main__box__block__forms__list__text ニックネーム
+              = f.email_field :nickname, class:"resist--main__box__block__forms__list__form", placeholder:"ニックネーム"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text メールアドレス
-              = f.text_field :username, class:"resist--main__box__block__forms__list__form", placeholder:"メールアドレス"
+              = f.email_field :email, autofocus: true, autocomplete: "email", class:"resist--main__box__block__forms__list__form", placeholder:"メールアドレス"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text パスワード
-              = f.text_field :password, class:"resist--main__box__block__forms__list__form", placeholder:"パスワード"
+              - if @minimum_password_length
+                %em
+                  (#{@minimum_password_length} characters minimum)
+              %br/
+              = f.password_field :password, autocomplete: "new-password", class:"resist--main__box__block__forms__list__form", placeholder:"パスワード"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text パスワード確認用
-              = f.text_field :password, class:"resist--main__box__block__forms__list__form", placeholder:"パスワード確認用"
+              = f.password_field :password_confirmation, autocomplete: "new-password", class:"resist--main__box__block__forms__list__form", placeholder:"パスワード確認用"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text 生年月日
               != sprintf(f.date_select(:birthday, prefix:'birthday',with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),' 年 ',' 月 ')+'日'
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text プロフィール画像
-              %input.resist--main__box__block__forms__one__pic(type="file")
+              = f.file_field :image
             .resist--main__box__block__forms__guideline
               %a.resist--main__box__block__forms__guideline__text(href="#") 利用規約
             .resist--main__box__block__forms__btn
-              = link_to users_registrations_mail_check_path, class:'resist--main__box__block__forms__btn--link' do
-                .resist--main__box__block__forms__btn__text 利用規約に同意して登録
+              .resist--main__box__block__forms__btn--link
+                = f.submit "利用規約に同意して登録", class: "resist--main__box__block__forms__btn__text"
+              -# = link_to users_registrations_mail_check_path, class:'resist--main__box__block__forms__btn--link' do
+              -#   .resist--main__box__block__forms__btn__text 利用規約に同意して登録
+
+-# %h2 Sign up
+-# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+-#   = render "devise/shared/error_messages", resource: resource
+-#   .field
+-#     = f.label :email
+-#     %br/
+-#     = f.email_field :email, autofocus: true, autocomplete: "email"
+-#   .field
+-#     = f.label :password
+-#     - if @minimum_password_length
+-#       %em
+-#         (#{@minimum_password_length} characters minimum)
+-#     %br/
+-#     = f.password_field :password, autocomplete: "new-password"
+-#   .field
+-#     = f.label :password_confirmation
+-#     %br/
+-#     = f.password_field :password_confirmation, autocomplete: "new-password"
+-#   .actions
+-#     = f.submit "Sign up"
+
+
+-# <%= render "devise/shared/links" %>
