@@ -1,0 +1,24 @@
+.devise--header{
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #ccc;
+  .devise--header__block{
+    .devise--header__block__upper{
+      height: 60px;
+      text-align: center;
+      line-height: 50px;
+      background-color: pink;
+      .devise--header__logo{
+        min-width: 140px;
+        max-width: 140px;
+        width: 140px;
+        height: 33px;
+        margin: 14px 0;
+      }
+    }
+  }
+}
+        .devise--header__block__lower{
+          height: 40px;
+          background-color: powderblue;
+        }

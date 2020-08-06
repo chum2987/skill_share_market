@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   end
   
   resources :skills, only: [:show]
- 
+  
 end
