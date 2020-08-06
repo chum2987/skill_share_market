@@ -11,8 +11,10 @@
         .resist--main__box__block__title
           %head.resist--main__box__block__title__text 新規登録
         .resist--main__box__block__forms
-          = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-
+          -# = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = form_for(resource, as: resource_name, url: registration_path(resource_name), builder: FormHelper::FormWithErrorMessageBuilder) do |f|
+            -# FormHelperをapp/helpers/form_helperに指定することでエラー内容を各要素のフォームのしたに出るように設定しました。
+            -# 従来のdeviseのFormHelperを適用し画面上部にエラー内容を表示したい場合FormHelperのオプションを消去し= render "shared/_error_messages"を画面上部に書き込んでください
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text ニックネーム
               = f.text_field :nickname, class:"resist--main__box__block__forms__list__form", placeholder:"ニックネーム"
