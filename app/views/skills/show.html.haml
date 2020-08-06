@@ -1,4 +1,4 @@
-=render "/layouts/header"
+
 .detapage
   .detapage__colums
     .detapage__colums__main
@@ -27,10 +27,26 @@
                       販売実績
                     .c-perfomance_content
                       34 件
-                .c-perfromance_row
                   .c-perfomance_item_c-performance_stock
                     .c-performance_label
                       残り
+                    .c-perfomance_content
+                      4枠
+                    
 
+              -# 画像の場所
+            .detapage__colums__main__Photo
+              .detapage__colums__main__Photo-img
+                %span.detapage__colums__main__Photo-img
+                = image_tag "kari-img.jpeg", class: "photo-img-show"
+            .detapage__colums__main__Photo__sub
+              %span.detapage__colums__main__Photo__sub-img
+              = image_tag "rails1.png", class: "sub-list"
+              -# .detapage__colums__main__Photo__sub-img2
+              -# = image_tag "rails2.png", class: "sub-list2"
+              -# .detapage__colums__main__Photo__sub-img3
+              -# = image_tag "rails3.png", class: "sub-list3"
 
-            .detapage__colums__main__header__c-serviceDetailTitle
+              -# 依頼ボタン
+            .detapage__colums__main__buy
+              .detapage__colums__main__buy__botn

@@ -3,7 +3,7 @@
   max-width: 100%;
   font-size: 14px;
   background-color: yellowgreen;
-  height: 500px;
+  // height: 500px;
   .detapage__colums {
     .detapage__colums__main {
       display: contents;
@@ -122,17 +122,65 @@
         position: relative;
       }
     }
+      //残り//
+    .c-perfomance_item_c-performance_stock{
+      display: inline-block;
+      margin-right: 20px;
+      line-height: 1;
+      .c-performance_label {
+        margin-right: 4px;
+        padding: 4px 8px 5px;
+        font-size: 12px;
+        display: inline-block;
+        background: #f3f3f3;
+      }
+      .c-perfomance_content {
+        display: inline-block;
+        top: 1px;
+        position: relative;
+      }
+    }
   }
-  //残り//
+
   .c-perfromance_row {
     margin-top: 4px;
-    .c-perfomance_item_c-performance_stock{
-      
-    }
+    
   }
   
 }
-
+// 写真の場所
+.detapage__colums__main__Photo {
+  background: white;
+  width: 700px;
+  margin: auto;
+  padding: 24px 40px 24px;
+  margin-top: 10px;
+  .detapage__colums__main__Photo-img{
+    text-align: center;
+    .photo-img-show {
+      width: 560px;
+      height: 346px;
+      object-fit: cover;
+    }
+  }
+}
+.detapage__colums__main__Photo__sub {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  .detapage__colums__main__Photo__sub-img {
+    
+    .sub-list{
+      width: 100%;
+      height: 87px;
+      object-fit: cover;
+    }
+  }
+}
+  // 依頼ボタン
+.detapage__colums__main__buy {
+  
+}
 }
 .staricon {
   color: yellow;
