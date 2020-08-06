@@ -12,19 +12,24 @@
           %head.resist--main__box__block__title__text 新規登録
         .resist--main__box__block__forms
           = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text ニックネーム
               = f.text_field :nickname, class:"resist--main__box__block__forms__list__form", placeholder:"ニックネーム"
+              %em
+                ※3文字以上20文字以内、記号不可。登録後に変更できます。
+              %br/
+
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text メールアドレス
               = f.email_field :email, autofocus: true, autocomplete: "email", class:"resist--main__box__block__forms__list__form", placeholder:"メールアドレス"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text パスワード
+              = f.password_field :password, autocomplete: "new-password", class:"resist--main__box__block__forms__list__form", placeholder:"パスワード"
               - if @minimum_password_length
                 %em
-                  (#{@minimum_password_length} characters minimum)
+                  ※6文字以上半角英数記号のみ（英数混合必須）
               %br/
-              = f.password_field :password, autocomplete: "new-password", class:"resist--main__box__block__forms__list__form", placeholder:"パスワード"
             .resist--main__box__block__forms__one
               .resist--main__box__block__forms__list__text パスワード確認用
               = f.password_field :password_confirmation, autocomplete: "new-password", class:"resist--main__box__block__forms__list__form", placeholder:"パスワード確認用"
