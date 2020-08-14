@@ -177,9 +177,22 @@
     }
   }
 }
+
+.detapage__colums__main__content {
+  .detapage__colums__main__content__box {
+    padding: 0 40px;
+    .detapage__colums__main__content__box__name {
+      font-size: large;
+      .detapage__colums__main__content__box__name__data {
+        font-size: small;
+      }
+    }
+  }
+
+}
   // 依頼ボタン
 .detapage__colums__main__buy {
-  
+
 }
 }
 .staricon {
