@@ -38,15 +38,50 @@
             .detapage__colums__main__Photo
               .detapage__colums__main__Photo-img
                 %span.detapage__colums__main__Photo-img
-                = image_tag "kari-img.jpeg", class: "photo-img-show"
+                = image_tag "20200806211637.JPEG", class: "photo-img-show"
             .detapage__colums__main__Photo__sub
               %span.detapage__colums__main__Photo__sub-img
               = image_tag "rails1.png", class: "sub-list"
-              -# .detapage__colums__main__Photo__sub-img2
-              -# = image_tag "rails2.png", class: "sub-list2"
-              -# .detapage__colums__main__Photo__sub-img3
-              -# = image_tag "rails3.png", class: "sub-list3"
 
+              -# 詳細内容
+            .detapage__colums__main__content
+              .detapage__colums__main__content__box
+                .detapage__colums__main__content__box__name 詳細内容
+                .detapage__colums__main__content__box__name__data
+                %p.date
+                ・開発環境を構築してみたけどエラーで進めない！<br>
+                ・rails sが立ち上がらない！<br>
+                ・WEBアプリのアイデアはあるけどどうやったら実現できる？<br>
+                ・Ruby on Railsで実現できるの？<br>
+                ・Railsやってみたけどエラーが解決できない！<br>
+                ・参考書を買ってやってみたけど思い通りに動かない！<br>
+                ・オススメの勉強方は？<br>
+
+            .detapage__colums__main__details
+              .detapage__colums__main__details__box
+                .detapage__colums__main__details__box__praice
+                  %table{:border => "1", :width => "70%"}
+                    %tr.Price
+                      %th.pri{:width => "50%"} 値段
+                      %td 5000 円
+                
+                    %tr.career
+                      %th.pri{:width => "50%"} 経験
+                      %td 8年
+
+                    %tr.career
+                      %th.pri{:width => "50%"} 所在地
+                      %td 東京都　足立区
+
+                    %tr.career
+                      %th.pri{:width => "50%"} その他詳細
+                      %td.sonota
+
+                    
+              
+              
+              
+              
               -# 依頼ボタン
             .detapage__colums__main__buy
               .detapage__colums__main__buy__botn
