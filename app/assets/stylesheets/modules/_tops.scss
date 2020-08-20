@@ -1,20 +1,25 @@
 .main{
-
+  padding-top: 60px;
   &__top-image{
+
     height: 560px;
     align-items: center;
     padding: 0 60px;
     display: flex;
-    background-position: top center;
-    background-image: url("/assets/3444658_l.jpg");
-    background-size: 750px;
+    background-image: url("/assets/shutterstock_1133982488.jpg");
+    background-size: 1400px;
     &__content{
-      max-width: 1280px;
+      top: 150px;
+      right: 20px;
+      position: absolute;
+      max-width: 650px;
       width: 100%;
       margin: 0 auto;
-      padding: 35px 0 0 0;
+      padding: 5px 0 0 0;
+
       &__title{
-        font-size: 60px;
+        font-size: 40px;
+        font-weight: bold;
         color: white;
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
       }
@@ -34,7 +39,16 @@
       }
     }
   }
-
+  &__container{
+    width: 1240px;
+    display: flex;
+    margin: 12px 20px 0;
+    justify-content: space-between;
+    &__category-lists{
+      width: 256px;
+      margin-right: 20px;
+    }
+  }
   &__upper-info{
     padding: 60px 20px;
     &__title{

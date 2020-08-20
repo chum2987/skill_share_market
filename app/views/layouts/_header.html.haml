@@ -1,35 +1,247 @@
 .header
   .header__main
     .header__main__inner
-      =link_to root_path do
-        = image_tag "skill_share_logo.png", class: "header-main-logo"
-      .header__main__inner__search
-        .header__main__inner__search__form
-          = form_for "#" do |f| 
-            .input-box
-              = f.text_field :keyword, class: "header__main__inner__search__txt", placeholder:"キーワードから探す"
-              %label.header__main__inner__search__btn
-                = icon('fas', 'search', class: '')
-                = f.submit "", class: "header__main__inner__search__btn--display"
+      -# =image_tag "skill_share_logo.png",class:"skill-logo", size:"30%"
+      %ul.dropdwn
+        %li
+          サービスを探す
+          %ul.dropdwn_menu
+            %li
+              %a{:href => "#"} プログラマー
+            %li
+              %a{:href => "#"} デザイナー
+        %li
+          出品者を探す
+          %ul.dropdwn_menu
+            %li
+              %a{:href => "#"} B1
+            %li
+              %a{:href => "#"} B2
+            %li
+              %a{:href => "#"} B3
+        %li
+          公開依頼する
+                    
+          %ul.dropdwn_menu
+            %li
+              %a{:href => "#"} C1
+            %li
+              %a{:href => "#"} C2
+            %li
+              %a{:href => "#"} C3
+            %li
+              %a{:href => "#"} C4
+        %li
+          ブログを探す
+          %ul.dropdwn_menu
+            %li
+              %a{:href => "#"} D1
+            %li
+              %a{:href => "#"} D2
+            %li
+              %a{:href => "#"} D3
+            %li
+              %a{:href => "#"} D4
+            %li
+              %a{:href => "#"} D5
+        %li
+          仕事を探す
+          %ul.dropdwn_menu
+            %li
+              %a{:href => "#"} D1
+            %li
+              %a{:href => "#"} D2
+            %li
+              %a{:href => "#"} D3
+            %li
+              %a{:href => "#"} D4
+            %li
+              %a{:href => "#"} D5
 
+
+    -#   =link_to root_path do
+    -#     = image_tag "skill_share_logo.png", class: "header-main-logo"
+    -#   .header__main__inner__search
+    -#     .header__main__inner__search__form
+    -#       = form_for "#" do |f| 
+    -#         .input-box
+    -#           = f.text_field :keyword, class: "header__main__inner__search__txt", placeholder:"キーワードから探す"
+    -#           %label.header__main__inner__search__btn
+    -#             = icon('fas', 'search', class: '')
+    -#             = f.submit "", class: "header__main__inner__search__btn--display"
 
         
-      .header__main__inner__nav__right
-        %ul.box
-          -if user_signed_in?
-            %li.user_box__nav__right__new
-              =link_to "スキル提供", "#" 
-            %li.user_box__nav__right__mypage
-              =link_to "マイページ", "#"
-            %li.user_box__nav__right__logout
-              =link_to "ログアウト", destroy_user_session_path, :method => :delete
+  -#     .header__main__inner__nav__right
+  -#       %ul.box
+  -#         -if user_signed_in?
+  -#           %li.user_box__nav__right__new
+  -#             =link_to "スキル提供", "#" 
+  -#           %li.user_box__nav__right__mypage
+  -#             =link_to "マイページ", "#"
+  -#           %li.user_box__nav__right__logout
+  -#             =link_to "ログアウト", destroy_user_session_path, :method => :delete
 
-          -else
-            %li.user_box__nav__right__new
-              =link_to "新規登録", users_registrations_index_path
-            %li.head__in__nav__right__login
-              =link_to "ログイン", new_user_session_path
+  -#         -else
+  -#           %li.user_box__nav__right__new
+  -#             =link_to "新規登録", users_registrations_index_path
+  -#           %li.head__in__nav__right__login
+  -#             =link_to "ログイン", new_user_session_path
 
   
-  .neader_sub
-    .header_sub_inner
+  -# .header_sub
+  -#   .header_sub__inner
+  -#     %ul.dropdwn
+  -#       %li
+  -#         イラスト・似顔絵・漫画
+  -#         %ul.dropdwn_menu
+  -#           %li
+  -#             %a{:href => "#"} プログラマー
+  -#           %li
+  -#             %a{:href => "#"} デザイナー
+  -#       %li
+  -#         デザイン
+  -#         %ul.dropdwn_menu
+  -#           %li
+  -#             %a{:href => "#"} B1
+  -#           %li
+  -#             %a{:href => "#"} B2
+  -#           %li
+  -#             %a{:href => "#"} B3
+  -#       %li
+  -#         Webサイト制作・デザイン
+                    
+  -#         %ul.dropdwn_menu
+  -#           %li
+  -#             %a{:href => "#"} C1
+  -#           %li
+  -#             %a{:href => "#"} C2
+  -#           %li
+  -#             %a{:href => "#"} C3
+  -#           %li
+  -#             %a{:href => "#"} C4
+  -#       %li
+  -#         音楽・ナレーション
+  -#         %ul.dropdwn_menu
+  -#           %li
+  -#             %a{:href => "#"} D1
+  -#           %li
+  -#             %a{:href => "#"} D2
+  -#           %li
+  -#             %a{:href => "#"} D3
+  -#           %li
+  -#             %a{:href => "#"} D4
+  -#           %li
+  -#             %a{:href => "#"} D5
+
+  -#       %li
+  -#         動画・写真・画像
+  -#         %ul.dropdwn_menu
+  -#           %li
+  -#             %a{:href => "#"} D1
+  -#           %li
+  -#             %a{:href => "#"} D2
+  -#           %li
+  -#             %a{:href => "#"} D3
+  -#           %li
+  -#             %a{:href => "#"} D4
+  -#           %li
+  -#             %a{:href => "#"} D5
+
+  -#       %li
+  -#         IT・プログラミング
+  -#         %ul.dropdwn_menu
+  -#           %li
+  -#             %a{:href => "#"} D1
+  -#           %li
+  -#             %a{:href => "#"} D2
+  -#           %li
+  -#             %a{:href => "#"} D3
+  -#           %li
+  -#             %a{:href => "#"} D4
+  -#           %li
+  -#             %a{:href => "#"} D5
+
+  -#       %li
+  -#         集客・Webマーケティング
+  -#         %ul.dropdwn_menu
+  -#           %li
+  -#             %a{:href => "#"} D1
+  -#           %li
+  -#             %a{:href => "#"} D2
+  -#           %li
+  -#             %a{:href => "#"} D3
+  -#           %li
+  -#             %a{:href => "#"} D4
+  -#           %li
+  -#             %a{:href => "#"} D5
+
+  -#       -# %li
+  -#       -#   翻訳・語学
+  -#       -#   %ul.dropdwn_menu
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D1
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D2
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D3
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D4
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D5
+
+  -#       -# %li
+  -#       -#   悩み相談・カウンセリング
+  -#       -#   %ul.dropdwn_menu
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D1
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D2
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D3
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D4
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D5
+
+  -#       -# %li
+  -#       -#   恋愛・結婚
+  -#       -#   %ul.dropdwn_menu
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D1
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D2
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D3
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D4
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D5
+
+  -#       -# %li
+  -#       -#   美容・ファッション・健康
+  -#       -#   %ul.dropdwn_menu
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D1
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D2
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D3
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D4
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D5
+
+  -#       -# %li
+  -#       -#   翻訳・語学
+  -#       -#   %ul.dropdwn_menu
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D1
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D2
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D3
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D4
+  -#       -#     %li
+  -#       -#       %a{:href => "#"} D5
+              
