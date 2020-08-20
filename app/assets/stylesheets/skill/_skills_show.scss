@@ -179,6 +179,7 @@
 }
 
 .detapage__colums__main__content {
+  margin-bottom: 20px;
   .detapage__colums__main__content__box {
     padding: 0 40px;
     .detapage__colums__main__content__box__name {
@@ -188,13 +189,47 @@
       }
     }
   }
-
 }
+
+.detapage__colums__main__details {
+  width: 100%;
+  margin: 0 auto;
+  .detapage__colums__main__details__box {
+    margin: 0 auto;
+    width: 90%;
+    .detapage__colums__main__details__box__praice {
+      margin: 0 auto;
+      width: 100%;
+      table {
+        margin:  0 auto;
+        
+        th {
+          text-align: center;
+          letter-spacing: 0.05em
+        }
+          .pri {
+            width: 50px;
+          }
+        td {
+          padding: 0 3px;
+          letter-spacing: 0.05em
+        }
+          .sonota {
+            height: 90px;
+            }
+          }
+      }
+    }
+  }
+}
+
+
+
   // 依頼ボタン
 .detapage__colums__main__buy {
 
 }
-}
+
 .staricon {
   color: yellow;
 }

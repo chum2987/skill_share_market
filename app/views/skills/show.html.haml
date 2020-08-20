@@ -42,10 +42,6 @@
             .detapage__colums__main__Photo__sub
               %span.detapage__colums__main__Photo__sub-img
               = image_tag "rails1.png", class: "sub-list"
-              -# .detapage__colums__main__Photo__sub-img2
-              -# = image_tag "rails2.png", class: "sub-list2"
-              -# .detapage__colums__main__Photo__sub-img3
-              -# = image_tag "rails3.png", class: "sub-list3"
 
               -# 詳細内容
             .detapage__colums__main__content
@@ -61,11 +57,27 @@
                 ・参考書を買ってやってみたけど思い通りに動かない！<br>
                 ・オススメの勉強方は？<br>
 
-              
-              
-              
-              
-              
+            .detapage__colums__main__details
+              .detapage__colums__main__details__box
+                .detapage__colums__main__details__box__praice
+                  %table{:border => "1", :width => "70%"}
+                    %tr.Price
+                      %th.pri{:width => "50%"} 値段
+                      %td 5000 円
+                
+                    %tr.career
+                      %th.pri{:width => "50%"} 経験
+                      %td 8年
+
+                    %tr.career
+                      %th.pri{:width => "50%"} 所在地
+                      %td 東京都　足立区
+
+                    %tr.career
+                      %th.pri{:width => "50%"} その他詳細
+                      %td.sonota
+
+                    
               
               
               
