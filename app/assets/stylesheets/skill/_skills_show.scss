@@ -143,11 +143,14 @@
   }
 
   .c-perfromance_row {
-    margin-top: 4px;
-    
+    margin-top: 4px; 
   }
-  
 }
+
+.staricon {
+  color: yellow;
+}
+
 // 写真の場所
 .detapage__colums__main__Photo {
   background: white;
@@ -223,6 +226,116 @@
   }
 }
 
+// ライン風１
+// /*******************************
+// * left
+// ********************************/
+
+// .left_balloon {
+//   position: relative;
+//   background: #fff;
+//   border: 1px solid #777;
+//   margin: 10px;
+//   padding: 10px;
+//   border-radius: 15px;
+//   margin-right: 20%;
+//   clear: both;
+//   max-width: 500px;
+//   float: left;
+
+//   &:after, &:before {
+//     right: 100%;
+//     top: 50%;
+//     border: solid transparent;
+//     content: " ";
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     pointer-events: none;
+//   }
+
+//   &:after {
+//     border-color: rgba(255, 255, 255, 0);
+//     border-right-color: #fff;
+//     border-width: 7px;
+//     margin-top: -7px;
+//   }
+
+//   &:before {
+//     border-color: rgba(0, 0, 0, 0);
+//     border-right-color: #000;
+//     border-width: 8px;
+//     margin-top: -8px;
+//   }
+// }
+
+// /*******************************
+// * right
+// ********************************/
+
+// .right_balloon {
+//   position: relative;
+//   background: #85e249;
+//   border: 1px solid #777;
+//   margin: 10px;
+//   padding: 10px;
+//   border-radius: 15px;
+//   margin-left: 20%;
+//   clear: both;
+//   max-width: 500px;
+//   float: right;
+
+//   &:after, &:before {
+//     left: 100%;
+//     top: 50%;
+//     border: solid transparent;
+//     content: " ";
+//     height: 0;
+//     width: 0;
+//     position: absolute;
+//     pointer-events: none;
+//   }
+
+//   &:after {
+//     border-color: rgba(133, 226, 73, 0);
+//     border-left-color: #85e249;
+//     border-width: 7px;
+//     margin-top: -7px;
+//   }
+
+//   &:before {
+//     border-color: rgba(119, 119, 119, 0);
+//     border-left-color: #777;
+//     border-width: 8px;
+//     margin-top: -8px;
+//   }
+// }
+
+// /*******************************
+// * clear
+// ********************************/
+
+// .clear_balloon {
+//   clear: both;
+// }
+
+// .comment_area {
+//   margin-bottom: 20px;
+// }
+
+// /*******************************
+// * 改行
+// ********************************/
+
+// .new_line {
+//   white-space: pre-line;
+// }
+
+
+
+
+
+
 
 
   // 依頼ボタン
@@ -230,7 +343,58 @@
 
 }
 
-.staricon {
-  color: yellow;
+// ライン風２
+// 入力・送信ボタン
+.container {
+  width: 60%;
+  margin: 30px auto;
+  // 青色エリア
+  .chat-area {
+    height: 80vh;
+    background: #8DB4E5;
+    overflow: scroll;
+    // メッセージエリア
+    /* 入力した文字を表示する部分 */
+   .chat-message {
+      max-width: 300px;
+      border-radius: 20px;
+      padding: 10px 30px;
+      background: #61E739;
+      color: #001A32;
+      font-weight: bold;
+    }
+  }
+  .message-area {
+    height: 10vh;
+    display: flex;
+    .message-area-text {
+      width: 80%;
+    }
+    .message-area-button {
+      width: 20%;
+    }
+  }
+    /* テキストエリアはリサイズをできなくして、横幅いっぱいに表示 */
+  .message-area-text textarea {
+    width: 100%;
+    height: 100%;
+    resize: none; /* これでユーザーのリサイズをできなくする */
+    border: 1px solid #ddd; /* 枠線をつけて領域を分かりやすく */
+    box-sizing: border-box; /* borderを付けてるので、border込の大きさにする */
+  }
+    // ボタンの装飾
+  .message-area-button button {
+    width: 100%;
+    height: 100%;
+    background: #61E739;
+    color: #fff;
+    font-size: 2.0rem;
+    font-weight: bold;
+    border: 0;
+   }
 }
+
+
+
+
 
