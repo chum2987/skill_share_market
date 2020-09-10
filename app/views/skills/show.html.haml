@@ -77,11 +77,40 @@
                       %th.pri{:width => "50%"} その他詳細
                       %td.sonota
 
-                    
-              
-              
-              
-              
-              -# 依頼ボタン
-            .detapage__colums__main__buy
-              .detapage__colums__main__buy__botn
+-# challenge
+-# .container-fluid
+-#   .comment_area
+-#     %div{"ng-repeat" => "data in hoge.chatdata"}
+-#       .row
+-#         .col-xs-12
+-#           %p.left_balloon {{data.left}}
+-#           %br/
+-#           / 他人のコメント
+-#           %span{"ng-if" => "data.type == 'chat'"}
+-#             %p.right_balloon.new_line {{data.right}}
+-#             %br/
+-#             / 自分のコメント
+-#   .row.text-center
+-#     .col-xs-12
+-#       %form{:name => "form", :novalidate => ""}
+-#         %textarea#comment.form-control.input-sm{:name => "body", "ng-model" => "hoge.form.comment", :placeholder => "コメントを書く", :rows => "3"}
+-#         %input.btn.btn-success{"ng-click" => "qsc.postComment()", :type => "submit", :value => "送信"}/
+  -# 依頼ボタン
+  .detapage__colums__main__buy
+    .detapage__colums__main__buy__botn
+
+-# ライン風２
+-# 入力・送信ボタン
+.container
+  -# 青色エリア
+  .chat-area
+    / テスト表示用のメッセージなので後で消すよ
+    -# %p.chat-message こんにちは
+  
+  .message-area
+    .message-area-text
+      %textarea#text
+    .message-area-button
+      %button#send.disabled-button 送信
+
+
